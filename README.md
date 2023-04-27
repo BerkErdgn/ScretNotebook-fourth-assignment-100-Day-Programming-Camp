@@ -9,7 +9,7 @@ The purpose of this project is to hide your notes with password. You cannot see 
 
 ## Screenshots
 
-Game Screen  
+Main Screen  
  --- | 
 ![](https://github.com/BerkErdgn/ScretNotebook-fourth-assignment-100-Day-Programming-Camp/blob/main/sc/1.PNG?raw=true) 
 
