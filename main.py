@@ -1,16 +1,41 @@
-# This is a sample Python script.
+import tkinter
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+window = tkinter.Tk()
+window.title("Secret Notebook")
+window.config(padx=50, pady=50)
 
+FONT_ONE = ("Arial", 10)
+WIDTH_ENTRY = 35
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+top_secret_pic = tkinter.PhotoImage(file="topsecret.png")
+pic_label = tkinter.Label(image=top_secret_pic, bg="#f0f0f0")
+pic_label.pack()
 
+title_label = tkinter.Label(text="Enter your title", font=FONT_ONE, pady=5)
+title_label.pack()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+title_entry = tkinter.Entry(width=WIDTH_ENTRY)
+title_entry.focus()
+title_entry.pack()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+secret_not_label = tkinter.Label(text="Enter your secret", font=FONT_ONE, pady=5)
+secret_not_label.pack()
+
+secret_not_entry = tkinter.Text(width=45)
+secret_not_entry.pack()
+
+mater_key_label = tkinter.Label(text="Enter master key", font=FONT_ONE, pady=5)
+mater_key_label.pack()
+
+mater_key_entry = tkinter.Entry(width=WIDTH_ENTRY)
+mater_key_entry.pack()
+
+save_button = tkinter.Button(text="Save & Encrypt")
+save_button.config(pady=5)
+save_button.pack()
+
+decrypt_button = tkinter.Button(text="Decrypt")
+decrypt_button.config(pady=5)
+decrypt_button.pack()
+
+window.mainloop()
